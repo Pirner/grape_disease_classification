@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="{% static 'grape_classifier/style.css' %}">
