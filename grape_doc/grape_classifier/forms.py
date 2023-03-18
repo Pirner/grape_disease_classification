@@ -8,8 +8,9 @@ class ClassificationRequestForm(forms.ModelForm):
 
     class Meta:
         model = GrapeClassification
-        fields = ('description', )
+        fields = ('description', 'image')
 
         widgets = {
-            'description': forms.TextInput(attrs={'class': 'form-control small'})
+            'description': forms.TextInput(attrs={'class': 'form-control small'}),
+            'image': forms.FileInput(attrs={'class': 'form-control small'})
         }
