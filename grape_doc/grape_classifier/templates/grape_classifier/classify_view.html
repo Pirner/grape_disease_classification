@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block title %} Classify {% endblock %}
+
+{% block content %}
+
+<main role="main">
+    <div class="container text-center">
+        please classify me
+        <form>
+            <div class="mb-3">
+                <div class="form-group">
+                    <form action="/your-name/" method="post">
+                        {% csrf_token %}
+                        {{ form }}
+                        <button class="btn btn-secondary">Post</button>
+                    </form>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</main>
+{% endblock %}
