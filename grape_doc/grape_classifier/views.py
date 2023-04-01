@@ -32,6 +32,7 @@ def classify_view(request):
     # if a GET (or any other method) we'll create a blank form
     else:
         form = ClassificationRequestForm()
+        print('requested the classification view in GET?')
 
     context = {'form': form}
     return HttpResponse(template.render(context, request))
